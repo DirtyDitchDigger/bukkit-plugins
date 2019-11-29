@@ -1,2 +1,3 @@
-# bukkit-plugins
-a collection of plugins for minecraft bukkit servers
+## Plugins
+
+ - [Greentext](https://github.com/mintoyatsu/bukkit-plugins/tree/master/Greentext) - Automatically colorizes player messages to be like certain imageboards.
