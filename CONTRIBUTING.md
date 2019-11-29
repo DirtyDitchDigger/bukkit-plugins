@@ -8,7 +8,7 @@ You will need to find a copy of the Bukkit API .jar and CraftBukkit Server .jar 
 
 Archived Bukkit plugin tutorial (making/exporting an Eclipse project): https://web.archive.org/web/20110925163757/http://wiki.bukkit.org/Plugin_Tutorial
 
-Archived Bukkit-API javadocs (for use in Eclipse): http://web.archive.org/web/20111107092923/http://jd.bukkit.org/apidocs
+CB1060 javadocs (compile javadoc archive yourself): https://github.com/Bukkit/Bukkit-JavaDoc/tree/da29e0aa4dcb08c5c91157c0830851330af8b572
 
 Minecraft - CraftBukkit versions (incomplete listing):
 
