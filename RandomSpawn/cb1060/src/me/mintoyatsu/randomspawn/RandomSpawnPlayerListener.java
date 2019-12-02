@@ -50,10 +50,7 @@ public class RandomSpawnPlayerListener extends PlayerListener {
         if (!avoidHazards) {
             return true;
         }
-        int locationX = location.getBlockX();
-        int locationY = location.getBlockY() - 1;
-        int locationZ = location.getBlockZ();
-        Location locationBlock = new Location(world, Double.parseDouble(Integer.toString(locationX)), Double.parseDouble(Integer.toString(locationY)), Double.parseDouble(Integer.toString(locationZ)));
+        Location locationBlock = new Location(world, location.getBlockX(), location.getBlockY() - 1, location.getBlockZ());
         return locationBlock.getBlock().getType() != Material.STATIONARY_WATER &&
                locationBlock.getBlock().getType() != Material.WATER &&
                locationBlock.getBlock().getType() != Material.STATIONARY_LAVA &&
