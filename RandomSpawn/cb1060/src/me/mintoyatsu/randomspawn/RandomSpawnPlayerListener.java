@@ -1,5 +1,6 @@
 package me.mintoyatsu.randomspawn;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -27,21 +28,20 @@ public class RandomSpawnPlayerListener extends PlayerListener {
             return;
         }
         // no bed, randomize spawn
-        Player player = event.getPlayer();
-        World world = player.getWorld();
+        World world = Bukkit.getServer().getWorlds().get(0);
         Location spawn = getRandomLocation(world);
         event.setRespawnLocation(spawn);
     }
 
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        World world = Bukkit.getServer().getWorlds().get(0);
         String name = player.getName();
-        File file = new File(String.valueOf(player.getWorld().getName()) + "/players/" + name + ".dat");
+        File file = new File(String.valueOf(world.getName()) + "/players/" + name + ".dat");
         if (file.exists()) {
             return;
         }
         // first join, randomize spawn
-        World world = player.getWorld();
         Location spawn = getRandomLocation(world);
         player.teleport(spawn);
     }
